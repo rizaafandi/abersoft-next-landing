@@ -39,7 +39,7 @@ export default function References() {
       {/* header 2 */}
       <div className="my-[5em] flex justify-center">
         <div className="flex lg:flex-row flex-col  lg:w-[70%] w-[80%]  items-center justify-between">
-          <div className="relative lg:-ml-[8em] w-[680px]">
+          <div className="relative lg:-ml-[8em] lg:w-[680px]">
             <Image
               src={Featly}
               alt="Featly"
