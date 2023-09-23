@@ -1,113 +1,112 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from "next/image";
+import PhoneImage from "@/public/images/Image_Phonbe.png";
+import Other1 from "@/public/images/Other_1.png";
+import Other2 from "@/public/images/Other_2.png";
+import Other3 from "@/public/images/Other_3.png";
+import Other4 from "@/public/images/Other_4.png";
+import Other5 from "@/public/images/Other_5.png";
+import Other6 from "@/public/images/Other_6.png";
 
 export default function Home() {
+  type content = {
+    image: StaticImageData;
+    title: string;
+    content: string;
+  };
+
+  let contents: content[] = [
+    {
+      title: "App Development",
+      content:
+        "We help you build native and cross-platform apps. We have helped clients reach Top Grossing apps with over 400 million downloads world wide.",
+      image: Other1,
+    },
+    {
+      title: "Websites",
+      content:
+        "We work with all the most common websites systems such as Wordpress and WooCommerce. But we also build websites from scratch for you.",
+      image: Other2,
+    },
+    {
+      title: "MVP & Prototype",
+      content:
+        "If you have an MVP that you need help getting developed or an idea of a prototype, let us know and we will assist you with the whole process.",
+      image: Other3,
+    },
+    {
+      title: "UI/UX Design",
+      content:
+        "Besides development we also have a great team of UI/UX designers that will take your old design to a whole new level or create new one from scratch.",
+      image: Other4,
+    },
+    {
+      title: "Consultant",
+      content:
+        "We can also provide you with an ongoing consultant that will be a great addition to your already established team.",
+      image: Other5,
+    },
+    {
+      title: "Software Systems",
+      content:
+        "We work with all kinds of software technologies such as Unity, Strapi & other useful integrations that will help you and your company.",
+      image: Other6,
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <main>
+      {/* header */}
+      <div className="mt-[5em] flex justify-center">
+        <div className="flex lg:flex-row-reverse flex-col w-[80%] items-center justify-center">
+          <div className="relative">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
+              src={PhoneImage}
+              alt="Phone Image"
               priority
+              width={750}
+              className="w-100"
             />
-          </a>
+          </div>
+          <div className="max-w-[35em] flex flex-col gap-2">
+            <h1 className="lg:text-[48px] lg:leading-[72px] text-[28px] leading-[42px] font-[700] text-blue">
+              We help you build the tech solutions of the future.
+            </h1>
+            <h3 className="lg:text-[24px] lg:leading-[36px] text-[18px] leading-[27px] font-[400] text-gray">
+              When you need help with development or design we are here to
+              create the best solutions for you. With over a decade of
+              experience in software development.
+            </h3>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/* content */}
+      <div className="mt-[5em] flex justify-center items-center">
+        <div className="grid lg:grid-cols-[1fr,1fr,1fr] grid-cols-[1fr] gap-[2em] justify-center items-center w-[80%] max-w-[1250px]">
+          {contents.map((c, i) => {
+            return (
+              <section
+                key={i}
+                className="lg:max-w-[300px] max-w-[28em] flex flex-col justify-center m-auto"
+              >
+                <Image
+                  src={c.image}
+                  alt={c.title}
+                  priority
+                  width={300}
+                  className="w-100"
+                />
+                <h2 className="lg:text-[32px] lg:leading-[48px] text-[24px] leading-[48px] font-[700] text-blue mb-[0.6em]">
+                  {c.title}
+                </h2>
+                <p className="lg:text-[16px] lg:leading-[25px] text-[14px] leading-[24px] font-[500] text-gray">
+                  {c.content}
+                </p>
+              </section>
+            );
+          })}
+        </div>
       </div>
     </main>
-  )
+  );
 }
