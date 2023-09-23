@@ -48,16 +48,7 @@ export default function About() {
 
       {/* header 3 */}
       <div className="flex justify-center">
-        <div className="flex lg:flex-row-reverse flex-col w-[80%] lg:w-full items-center justify-evenly pt-[6em]">
-          <div className="relative">
-            <Image
-              src={Hand}
-              alt="Hand"
-              priority
-              height={550}
-              className="w-100"
-            />
-          </div>
+        <div className="flex lg:flex-row flex-col w-[80%] lg:w-full items-center justify-evenly pt-[6em]">
           <div className="lg:max-w-[32em] max-w-[22em]  flex flex-col gap-5">
             <h2 className="lg:text-[32px] lg:leading-[48px] text-[24px] leading-[48px] font-[700] text-blue">
               Our philosophy.
@@ -81,6 +72,15 @@ export default function About() {
               2019 we won the Innovation & Entrepreneurship Award in Kunming for
               our work.
             </p>
+          </div>
+          <div className="relative">
+            <Image
+              src={Hand}
+              alt="Hand"
+              priority
+              height={550}
+              className="w-100"
+            />
           </div>
         </div>
       </div>

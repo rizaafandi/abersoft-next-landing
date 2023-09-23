@@ -166,7 +166,7 @@ export default function References() {
       <div className="mt-[5em] pt-[5em] flex justify-center bg-gray2">
         <div className="flex lg:flex-row flex-col  lg:w-[65%] w-[80%]  items-center justify-between">
           <div className="max-w-[35em] flex flex-col gap-2">
-            <h1 className="lg:text-[48px] lg:leading-[72px] text-[28px] leading-[42px] font-[700] text-white lg:-mr-[8em]">
+            <h1 className="lg:text-[48px] lg:leading-[72px] text-[28px] leading-[42px] font-[700] text-white">
               <p>We are also proud to </p>
               <p>have many influencers</p>
               <p>and celebrities as clients.</p>
@@ -184,16 +184,7 @@ export default function References() {
         </div>
       </div>
       <div className="pb-[5em] flex justify-center bg-gray2">
-        <div className="flex lg:flex-row flex-col w-[80%]  items-center justify-between">
-          <div className="relative">
-            <Image
-              src={Patric}
-              alt="Patric"
-              priority
-              width={975}
-              className="w-100"
-            />
-          </div>
+        <div className="flex lg:flex-row-reverse flex-col w-[80%]  items-center justify-between">
           <div className="max-w-[35em] flex flex-col gap-2">
             <h2 className="lg:text-[32px] lg:leading-[48px] text-[24px] leading-[48px] font-[700] text-white">
               Patrik Kittel
@@ -212,6 +203,15 @@ export default function References() {
               We also created an App for Patrik so that his fans always can
               follow him when he is out on his competitions and shows.
             </p>
+          </div>
+          <div className="relative">
+            <Image
+              src={Patric}
+              alt="Patric"
+              priority
+              width={975}
+              className="w-100"
+            />
           </div>
         </div>
         ;
