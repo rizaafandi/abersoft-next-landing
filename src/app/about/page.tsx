@@ -1,11 +1,11 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Team from "@/public/images/Team.png";
 import Quote from "@/public/images/el_quote-right.png";
 import Quote1 from "@/public/images/el_quote-right-1.png";
 import Hand from "@/public/images/victory_hand.png";
 import Studio from "@/public/images/abersoft_studios.png";
 
-export default function Home() {
+export default function About() {
   return (
     <main>
       {/* header 1 */}

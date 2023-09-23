@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Hero from "@/public/images/hero_desktop.png";
 
-export default function Home() {
+export default function Contact() {
   return (
     <main>
       {/* header */}
